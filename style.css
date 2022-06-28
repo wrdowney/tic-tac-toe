@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+:root {
+    --primary-color: rgb(194, 222, 222);
+    --secondary-color: #f8f8f8;
+    --padding-medium: 1.0rem;
+    --square-hover: #d8e4e9;
+    --border-color: #555;
+    --btn-color: rgb(146, 185, 213);
+    --btn-color-hover: rgb(172, 206, 230);
+    --btn-border-color: rgb(91, 129, 146);
+    --btn-text-color: rgb(48, 231, 69);
+    font-family: 'Roboto Mono', monospace;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: auto;
+    margin: 0px;
+}
+
+header {
+    padding: var(--padding-medium);
+    font-size: 3rem;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+.content {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding-medium);
+    gap: var(--padding-medium);
+}
+
+.game-message {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 2px solid var(--border-color);
+}
+
+.game-square {
+    height: 150px;
+    width: 150px;
+    border: 1px solid var(--border-color);
+    font-size: 5em;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-square:hover {
+    background-color: var(--square-hover);
+}
+
+.btn {
+    background-color: var(--btn-color);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: 2px solid var(--btn-border-color);
+    color: var(--btn-text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 3rem;
+}
+
+.btn:hover {
+    background-color: var(--btn-color-hover);
+}
+
+@media (max-width: 660px) {
+    .game-square {
+        height:100px;
+        width: 100px;
+    }
+}
