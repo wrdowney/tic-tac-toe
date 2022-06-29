@@ -9,6 +9,9 @@ const gameBoard = (() => {
 
     const resetBoard = () => {
         board.fill("");
+        gameOver = false;
+        gameMessage.innerHTML = "Player X's turn";
+        currentPlayer =  playerX;
     }
 
     const checkWin = () => {
@@ -38,7 +41,6 @@ const displayController = (() => {
     const update = () => {
         gameBoard.getBoard().forEach((cell, index) => {
             document.getElementById(`${index + 1}`).innerHTML = cell;
-            gameOver = false;
         });
     }
     return {update}
